@@ -134,7 +134,7 @@ article .header{
 }
 
 .title{
-    margin-top: 40px;
+    margin-top: 20px;
     font-size:16px;
     border-bottom: 1px solid #DDDDDD;
 }
@@ -150,10 +150,31 @@ article .header{
     margin-left: -40px;
 }
 
-li .wifi{
-    display:flex;
+.amenities-list{
+    list-style: none;
+    padding-left: 0;
 }
-li a {
-    display: block;
-    background-image: url(../images/icon_3.png);
+.TV, .pet-friendly, .wifi{
+    position: relative;
+    padding-left:20px
+}
+.TV::before, .pet-friendly::before, .wifi::before{
+   content: '';
+   width: 15px;
+   height: 15px;
+   position: absolute;
+   background-image: url("/web_static/images/icon_tv.png");
+   background-size: cover;
+   background-position: center;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+}
+.wifi::before{
+   content: '';
+   background-image: url("/web_static/images/icon_wifi.png");
+}
+.pet-friendly::before{
+   content: '';
+   background-image: url("/web_static/images/icon_pets.png");
 }
